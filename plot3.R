@@ -6,9 +6,6 @@ epc_feb <- epc[(epc$Date == '1/2/2007') |
                  (epc$Date == '2/2/2007'),]
 str(epc_feb)
 
-epc_feb$Date <- as.character(epc_feb$Date)
-epc_feb$Time <- as.character(epc_feb$Time)
-
 epc_feb$Date <- as.Date(epc_feb$Date, '%d/%m/%Y')
 epc_feb$DateTime <- strptime(paste(epc_feb$Date, 
                                    epc_feb$Time), 
